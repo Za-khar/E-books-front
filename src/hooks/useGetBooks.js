@@ -23,9 +23,13 @@ export const useGetBooks = () => {
     getBooks();
   }, []);
 
+  const refetch = () => {
+    getBooks();
+  };
+
   return {
     books,
     loading,
-    getBooks,
+    refetch,
   };
 };

@@ -15,8 +15,6 @@ import { useRouter } from "next/router";
 const pages = [
   { title: "Books list", link: "/" },
   { title: "Add book", link: "/add" },
-  { title: "Update book", link: "/update" },
-  { title: "Delete book", link: "/delete" },
 ];
 
 export const ResponsiveAppBar = () => {
@@ -92,10 +90,6 @@ export const ResponsiveAppBar = () => {
                   key={page.title}
                   onClick={handleButtonClick.bind(null, page.link)}
                   sx={{
-                    borderTop:
-                      router.pathname === page.link ? "2px solid #000" : "none", // Top border for the current page
-                    borderBottom:
-                      router.pathname === page.link ? "2px solid #000" : "none", // Bottom border for the current page
                     borderColor: "white",
                   }}
                 >
@@ -130,10 +124,6 @@ export const ResponsiveAppBar = () => {
                   my: 2,
                   color: "white",
                   display: "block",
-                  borderTop:
-                    router.pathname === page.link ? "2px solid #000" : "none", // Top border for the current page
-                  borderBottom:
-                    router.pathname === page.link ? "2px solid #000" : "none", // Bottom border for the current page
                   borderColor: "white",
                 }}
               >
